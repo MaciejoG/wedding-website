@@ -7,6 +7,7 @@ import {
 import { ExternalLink, Plane, Car, Hotel } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import venueMap from "@/assets/venue-map.png";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface VenueDialogProps {
   open: boolean;
@@ -14,28 +15,27 @@ interface VenueDialogProps {
 }
 
 const VenueDialog = ({ open, onOpenChange }: VenueDialogProps) => {
+  const { t } = useLanguage();
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="font-serif text-3xl text-foreground">Venue Details</DialogTitle>
+          <DialogTitle className="font-serif text-3xl text-foreground">{t.venueDialog.title}</DialogTitle>
         </DialogHeader>
         
         <div className="space-y-6">
           <div>
-            <h3 className="font-serif text-xl font-semibold mb-2 text-foreground">Address</h3>
-            <p className="text-muted-foreground">
-              Zamek Kliczków<br />
-              59-724 Kliczków<br />
-              Poland
+            <h3 className="font-serif text-xl font-semibold mb-2 text-foreground">{t.venueDialog.address}</h3>
+            <p className="text-muted-foreground whitespace-pre-line">
+              {t.venueDialog.addressValue}
             </p>
           </div>
 
           <div>
-            <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">Location Map</h3>
+            <h3 className="font-serif text-xl font-semibold mb-3 text-foreground">{t.venueDialog.locationMap}</h3>
             <img 
               src={venueMap} 
-              alt="Map showing venue location and distances to nearby airports" 
+              alt={t.venueDialog.mapAlt}
               className="w-full rounded-lg border border-border"
             />
           </div>
@@ -43,27 +43,27 @@ const VenueDialog = ({ open, onOpenChange }: VenueDialogProps) => {
           <div>
             <h3 className="font-serif text-xl font-semibold mb-3 text-foreground flex items-center gap-2">
               <Plane className="w-5 h-5 text-bordeaux" />
-              Nearby Airports
+              {t.venueDialog.nearbyAirports}
             </h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Wrocław Airport (WRO) - 130 km</li>
-              <li>• Berlin Airport (BER) - 200 km</li>
+              <li>• {t.venueDialog.airport1}</li>
+              <li>• {t.venueDialog.airport2}</li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-serif text-xl font-semibold mb-3 text-foreground flex items-center gap-2">
               <Car className="w-5 h-5 text-bordeaux" />
-              Getting to the Venue
+              {t.venueDialog.gettingThere}
             </h3>
             <div className="space-y-3 text-muted-foreground">
               <div>
-                <p className="font-medium text-foreground">From Wrocław Airport:</p>
-                <p>Take the A4 highway towards Legnica, then follow signs to Kliczków. Journey time approximately 1.5 hours by car.</p>
+                <p className="font-medium text-foreground">{t.venueDialog.fromWroclaw}</p>
+                <p>{t.venueDialog.wroclawDirections}</p>
               </div>
               <div>
-                <p className="font-medium text-foreground">From Berlin Airport:</p>
-                <p>Take the A15 highway south towards Poland, then connect to local routes to Kliczków. Journey time approximately 2.5 hours by car.</p>
+                <p className="font-medium text-foreground">{t.venueDialog.fromBerlin}</p>
+                <p>{t.venueDialog.berlinDirections}</p>
               </div>
             </div>
           </div>
@@ -71,10 +71,10 @@ const VenueDialog = ({ open, onOpenChange }: VenueDialogProps) => {
           <div>
             <h3 className="font-serif text-xl font-semibold mb-3 text-foreground flex items-center gap-2">
               <Hotel className="w-5 h-5 text-bordeaux" />
-              Accommodation
+              {t.venueDialog.accommodation}
             </h3>
             <p className="text-muted-foreground mb-3">
-              The venue offers on-site accommodation. When booking, please use our group code:
+              {t.venueDialog.accommodationText}
             </p>
             <div className="bg-accent/30 p-4 rounded-lg border border-bordeaux/20">
               <p className="font-mono font-semibold text-lg text-bordeaux">ABC123</p>
@@ -86,7 +86,7 @@ const VenueDialog = ({ open, onOpenChange }: VenueDialogProps) => {
               className="w-full bg-bordeaux hover:bg-bordeaux/90 text-bordeaux-foreground"
               onClick={() => window.open("https://kliczkow.com.pl/en/homepage/", "_blank")}
             >
-              <span>Visit Venue Website</span>
+              <span>{t.venueDialog.visitWebsite}</span>
               <ExternalLink className="ml-2 h-5 w-5" />
             </Button>
           </div>

@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const PersonalInvitation = () => {
   const [names, setNames] = useState<string[]>([]);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -14,11 +16,11 @@ const PersonalInvitation = () => {
 
   const getGreeting = () => {
     if (names.length === 0) {
-      return "Dear Friends";
+      return t.invitation.dearFriends;
     } else if (names.length === 1) {
-      return `Dear ${names[0]}`;
+      return `${t.invitation.dear} ${names[0]}`;
     } else {
-      return `Dear ${names.join(" and ")}`;
+      return `${t.invitation.dear} ${names.join(` ${t.invitation.and} `)}`;
     }
   };
 
@@ -29,10 +31,10 @@ const PersonalInvitation = () => {
           {getGreeting()}
         </h2>
         <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-6">
-          We are delighted to invite you to celebrate our wedding day with us.
+          {t.invitation.message1}
         </p>
         <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
-          Your presence would mean the world to us as we begin this beautiful journey together.
+          {t.invitation.message2}
         </p>
       </div>
     </section>

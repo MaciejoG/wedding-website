@@ -122,6 +122,10 @@ export default {
   				'Liberation Mono',
   				'Courier New',
   				'monospace'
+  			],
+  			display: [
+  				'Cinzel',
+  				'serif'
   			]
   		}
   	}
