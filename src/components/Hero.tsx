@@ -11,12 +11,9 @@ const Hero = () => {
       </div>
       
       <div className="relative flex h-full flex-col items-center justify-end pb-16 px-4">
-        <h1 className="font-serif text-5xl md:text-7xl font-bold text-background mb-4 drop-shadow-lg">
+        <h1 className="font-serif text-5xl md:text-7xl font-bold text-bordeaux drop-shadow-lg">
           Cassandra & Maciej
         </h1>
-        <p className="font-serif text-xl md:text-2xl text-background drop-shadow-lg">
-          We're getting married!
-        </p>
       </div>
     </section>
   );

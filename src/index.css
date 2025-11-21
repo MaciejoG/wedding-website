@@ -39,6 +39,9 @@ All colors MUST be HSL.
     --input: 240 4% 83%;
     --ring: 258 89% 66%;
 
+    --bordeaux: 0 70% 35%;
+    --bordeaux-foreground: 0 0% 98%;
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
@@ -124,6 +127,8 @@ All colors MUST be HSL.
     --border: 240 5% 33%;
     --input: 240 5% 33%;
     --ring: 255 91% 76%;
+    --bordeaux: 0 70% 40%;
+    --bordeaux-foreground: 0 0% 98%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 255 91% 76%;
