@@ -14,11 +14,11 @@ const RSVP = () => {
         </p>
         <Button 
           size="lg"
-          className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-lg px-8 py-6"
+          className="bg-bordeaux hover:bg-bordeaux/90 text-bordeaux-foreground font-medium text-lg px-8 py-6"
           onClick={() => window.open("https://doodle.com/", "_blank")}
         >
           <span>Respond to Invitation</span>
-          <ExternalLink className="ml-2 h-5 w-5" />
+          <ExternalLink className="ml-2 h-5 w-5 text-bordeaux-foreground" />
         </Button>
         <p className="text-sm text-muted-foreground mt-6">
           Can't wait to celebrate with you!
