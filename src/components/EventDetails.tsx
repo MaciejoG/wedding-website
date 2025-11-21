@@ -1,64 +1,67 @@
 import { useState } from "react";
-import { Calendar, MapPin, Clock, Navigation } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Calendar, Clock, MapPin } from "lucide-react";
 import VenueDialog from "./VenueDialog";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const EventDetails = () => {
   const [venueDialogOpen, setVenueDialogOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
-    <section className="py-20 px-4 bg-background">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="font-serif text-4xl md:text-5xl font-semibold text-center mb-16 text-foreground">
-          Event Details
-        </h2>
-        
-        <div className="flex flex-col gap-8">
-          <Card className="border-border/50 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <Calendar className="w-12 h-12 mx-auto mb-4 text-bordeaux" />
-              <h3 className="font-serif text-2xl font-semibold mb-2 text-foreground">Date</h3>
-              <p className="text-lg text-muted-foreground">Saturday, June 15th, 2024</p>
-            </CardContent>
-          </Card>
+    <>
+      <section className="py-20 px-4 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-center mb-12 text-foreground">
+            {t.eventDetails.title}
+          </h2>
+          
+          <div className="flex flex-col gap-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Calendar className="w-8 h-8 text-bordeaux mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-serif text-2xl font-semibold mb-2 text-foreground">{t.eventDetails.date}</h3>
+                    <p className="text-lg text-muted-foreground">{t.eventDetails.dateValue}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-          <Card className="border-border/50 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <Clock className="w-12 h-12 mx-auto mb-4 text-bordeaux" />
-              <h3 className="font-serif text-2xl font-semibold mb-2 text-foreground">Time</h3>
-              <p className="text-lg text-muted-foreground">Ceremony at 3:00 PM</p>
-              <p className="text-muted-foreground">Reception to follow</p>
-            </CardContent>
-          </Card>
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Clock className="w-8 h-8 text-bordeaux mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-serif text-2xl font-semibold mb-2 text-foreground">{t.eventDetails.time}</h3>
+                    <p className="text-lg text-muted-foreground">{t.eventDetails.timeValue}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-          <Card 
-            className="border-border/50 shadow-lg cursor-pointer hover:shadow-xl transition-shadow"
-            onClick={() => setVenueDialogOpen(true)}
-          >
-            <CardContent className="p-8 text-center">
-              <MapPin className="w-12 h-12 mx-auto mb-4 text-bordeaux" />
-              <h3 className="font-serif text-2xl font-semibold mb-2 text-foreground">Venue</h3>
-              <p className="text-lg text-muted-foreground">Zamek Kliczków</p>
-              <p className="text-muted-foreground">59-724 Kliczków, Poland</p>
-              <p className="text-sm text-bordeaux mt-2">Click for details</p>
-            </CardContent>
-          </Card>
-
-          <Card className="border-border/50 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <Navigation className="w-12 h-12 mx-auto mb-4 text-bordeaux" />
-              <h3 className="font-serif text-2xl font-semibold mb-2 text-foreground">Directions</h3>
-              <p className="text-lg text-muted-foreground">From downtown:</p>
-              <p className="text-muted-foreground">Take Highway 101 North</p>
-              <p className="text-muted-foreground">Exit at Celebration Lane</p>
-              <p className="text-muted-foreground">Parking available on-site</p>
-            </CardContent>
-          </Card>
+            <Card 
+              className="hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => setVenueDialogOpen(true)}
+            >
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <MapPin className="w-8 h-8 text-bordeaux mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-serif text-2xl font-semibold mb-2 text-foreground">{t.eventDetails.venue}</h3>
+                    <p className="text-lg text-muted-foreground">{t.eventDetails.venueValue}</p>
+                    <p className="text-sm text-muted-foreground/70 mt-1">{t.eventDetails.venueSubtext}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>
-      
+      </section>
+
       <VenueDialog open={venueDialogOpen} onOpenChange={setVenueDialogOpen} />
-    </section>
+    </>
   );
 };
 
