@@ -11,7 +11,7 @@ const Hero = () => {
       </div>
       
       <div className="relative flex h-full flex-col items-center justify-end pb-16 px-4">
-        <h1 className="font-display text-5xl md:text-7xl font-bold text-bordeaux drop-shadow-lg">
+        <h1 className="font-serif text-5xl md:text-7xl text-bordeaux drop-shadow-lg" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
           Cassandra & Maciej
         </h1>
       </div>
