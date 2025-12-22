@@ -8,6 +8,7 @@ import { ExternalLink, Plane, Car, Hotel } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import venueMap from "@/assets/venue-map.png";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useGuest } from "@/i18n/useGuest";
 
 interface VenueDialogProps {
   open: boolean;
@@ -16,6 +17,13 @@ interface VenueDialogProps {
 
 const VenueDialog = ({ open, onOpenChange }: VenueDialogProps) => {
   const { t } = useLanguage();
+  const { guestDetails } = useGuest();
+
+  // Check if any guest in the group has accommodation covered
+  const hasAccommodationCovered = 
+    guestDetails && 
+    guestDetails.accommodationCovered;
+    
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -74,11 +82,15 @@ const VenueDialog = ({ open, onOpenChange }: VenueDialogProps) => {
               {t.venueDialog.accommodation}
             </h3>
             <p className="text-muted-foreground mb-3">
-              {t.venueDialog.accommodationText}
+              {hasAccommodationCovered 
+                ? t.venueDialog.accommodationTextCovered
+                : t.venueDialog.accommodationTextNotCovered}
             </p>
-            <div className="bg-accent/30 p-4 rounded-lg border border-bordeaux/20">
-              <p className="font-mono font-semibold text-lg text-bordeaux">ABC123</p>
-            </div>
+            {!hasAccommodationCovered && (
+              <div className="bg-accent/30 p-4 rounded-lg border border-bordeaux/20">
+                <p className="font-mono font-semibold text-lg text-bordeaux">ABC123</p>
+              </div>
+            )}
           </div>
 
           <div>

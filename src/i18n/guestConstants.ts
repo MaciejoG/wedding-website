@@ -1,6 +1,6 @@
 export interface GuestDetails {
     names: string[];
-    names_calls: string[] | null;
+    callers: string[] | null;
     accommodationCovered: boolean;
     withPartner: boolean;
 }
@@ -8,25 +8,25 @@ export interface GuestDetails {
 export const GUEST_LIST: GuestDetails[] = [
     {
         names: ["Andreas", "Melanie"],
-        names_calls: null,
+        callers: ["Andreas", "Melanie"],
         accommodationCovered: true,
         withPartner: false
     },
     {
         names: ["Radek", "Ewa"],
-        names_calls: ["Radku", "Ewo"],
+        callers: ["Radku", "Ewo"],
         accommodationCovered: true,
         withPartner: false
     },
     {
         names: ["Miroslaw"],
-        names_calls: ["Miroslawie"],
+        callers: ["Miroslawie"],
         accommodationCovered: true,
         withPartner: true
     },
     {
         names: ["Loreena", "Jan"],
-        names_calls: null,
+        callers: ["Loreena", "Jan"],
         accommodationCovered: false,
         withPartner: false
     }

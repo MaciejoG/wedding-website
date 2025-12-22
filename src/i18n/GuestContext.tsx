@@ -3,7 +3,7 @@ import { GUEST_LIST, type GuestDetails } from "./guestConstants";
 
 export interface GuestContextType {
   names: string[];
-  guestDetails: GuestDetails[];
+  guestDetails: GuestDetails;
   isValid: boolean;
   error: string | null;
 }
@@ -12,8 +12,8 @@ export const GuestContext = createContext<GuestContextType | undefined>(undefine
 
 export const GuestProvider = ({ children }: { children: ReactNode }) => {
   const [names, setNames] = useState<string[]>([]);
-  const [guestDetails, setGuestDetails] = useState<GuestDetails[]>([]);
-  const [isValid, setIsValid] = useState(true);
+  const [guestDetails, setGuestDetails] = useState<GuestDetails>();
+  const [isValid, setIsValid] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -22,13 +22,14 @@ export const GuestProvider = ({ children }: { children: ReactNode }) => {
     const name2 = params.get("name2");
 
     const guestNames = [name1, name2].filter(Boolean) as string[];
+    console.log("Guest names from URL:", guestNames);
 
     if (guestNames.length === 0) {
       // No guest names provided - error
       setIsValid(false);
       setError("No guest(s) provided.");
       setNames([]);
-      setGuestDetails([]);
+      setGuestDetails(null);
       return;
     }
 
@@ -45,12 +46,12 @@ export const GuestProvider = ({ children }: { children: ReactNode }) => {
       setIsValid(true);
       setError(null);
       setNames(guestNames);
-      setGuestDetails([matchingGuestGroup]);
+      setGuestDetails(matchingGuestGroup);
     } else {
       setIsValid(false);
       setError(`Invalid guest pair: ${guestNames.join(" and ")}`);
       setNames([]);
-      setGuestDetails([]);
+      setGuestDetails(null);
     }
   }, []);
 
