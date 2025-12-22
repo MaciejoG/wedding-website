@@ -35,3 +35,23 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
+## Guest Personalization
+
+The website supports personalized invitations based on URL parameters. Guest names are validated against an allowed list (stored in the backend) to ensure only authorized guests can access the invitation.
+
+### URL Parameters
+
+- `name1` - First guest name (optional)
+- `name2` - Second guest name (optional)
+
+### Example URLs
+
+- `/?name1=Bob` - Personalized greeting for Bob
+- `/?name1=Bob&name2=Luca` - Personalized greeting for Bob and Luca
+
+If no guest name provided or the provided name does not exist in the preconfigured guest list, an error is displayed.
+
+### Adding New Guest Names
+
+Edit the `GUEST_LIST` constant in `/src/i18n/guestConstants.ts` to add or remove authorized guest names.
