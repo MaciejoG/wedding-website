@@ -5,6 +5,16 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const RSVP = () => {
   const { t } = useLanguage();
 
+  // TODO: Update RSVP links for each language
+  let rsvpLink = "";
+  if (t.language === 'pl') {
+    rsvpLink = "https://docs.google.com/forms/d/e/1FAIpQLScp530hfQet1dMqyLYMBOGsZoapkfKkpuXVqpXsl0d04kInBw/viewform?usp=dialog";
+  } else if (t.language === 'de') {
+    rsvpLink = "https://docs.google.com/forms/d/e/1FAIpQLScp530hfQet1dMqyLYMBOGsZoapkfKkpuXVqpXsl0d04kInBw/viewform?usp=dialog";
+  } else {
+    rsvpLink = "https://docs.google.com/forms/d/e/1FAIpQLScp530hfQet1dMqyLYMBOGsZoapkfKkpuXVqpXsl0d04kInBw/viewform?usp=dialog";
+  }
+  
   return (
     <section className="py-20 px-4 bg-accent/30">
       <div className="max-w-2xl mx-auto text-center">
@@ -17,7 +27,7 @@ const RSVP = () => {
         <Button 
           size="lg"
           className="bg-bordeaux hover:bg-bordeaux/90 text-bordeaux-foreground font-medium text-lg px-8 py-6"
-          onClick={() => window.open("https://forms.google.com/", "_blank")}
+          onClick={() => window.open(rsvpLink, "_blank")}
         >
           <span>{t.rsvp.button}</span>
           <ExternalLink className="ml-2 h-5 w-5 text-bordeaux-foreground" />

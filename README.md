@@ -24,7 +24,7 @@ npm run dev
 
 ## Deployment
 
-TODO: Add once CI/CD configured
+Deplyoment managed by AWS Amplify. Every commit to main triggers a redeployment.
 
 ## Technologies used
 
@@ -55,3 +55,11 @@ If no guest name provided or the provided name does not exist in the preconfigur
 ### Adding New Guest Names
 
 Edit the `GUEST_LIST` constant in `/src/i18n/guestConstants.ts` to add or remove authorized guest names.
+
+## TODO
+
+Functionality
+
+- Update the group code
+- Update the RSVP link according to the language
+- Add the full guest list
