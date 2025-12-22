@@ -29,7 +29,6 @@ export const translations = {
       date: "Date",
       dateValue: "August 29, 2026",
       time: "Time",
-      // TODO: Confirm the exact time with Cassandra
       timeValue: "4:00 PM",
       venue: "Venue",
       venueValue: "Kliczków Castle",
@@ -44,11 +43,17 @@ export const translations = {
       nearbyAirports: "Nearby Airports",
       airport1: "Wrocław Airport (WRO) - 130 km",
       airport2: "Berlin Airport (BER) - 200 km",
-      gettingThere: "Getting to the Venue by Car",
-      fromWroclaw: "From Wrocław Airport:",
-      wroclawDirections: "Journey time approximately 1.5 hours by car.",
-      fromBerlin: "From Berlin Airport:",
-      berlinDirections: "Journey time approximately 2.5 hours by car.",
+      gettingThere: "Getting to the Venue",
+      fromWroclaw: "From Wroclaw:",
+      wroclawDirections: {
+        byCar: "By car - journey time approximately 1.5 hours.",
+        byTrain: "By train (direct connection) - journey time approx. 1 hour to the nearby city Boleslawiec, from where we will pick you up."
+      },
+      fromBerlin: "From Berlin:",
+      berlinDirections: {
+        byCar: "By car - journey time approximately 2.5 hours.",
+        byTrain: "By train - journey time approx. 3.5 hours to the nearby city Boleslawiec, from where we will pick you up."
+      },
       accommodation: "Accommodation",
       accommodationTextNotCovered: "The venue offers on-site accommodation. When booking, please use our group code:",
       accommodationTextCovered: "We booked an on-site accommodation for you (1 night at the Castle, incl. breakfast)!",
@@ -104,10 +109,16 @@ export const translations = {
       airport1: "Flughafen Breslau (WRO) - 130 km",
       airport2: "Flughafen Berlin (BER) - 200 km",
       gettingThere: "Anreise zum Veranstaltungsort",
-      fromWroclaw: "Vom Flughafen Breslau:",
-      wroclawDirections: "Nehmen Sie die Autobahn A4 Richtung Legnica und folgen Sie dann den Schildern nach Kliczków. Fahrzeit ca. 1,5 Stunden.",
-      fromBerlin: "Vom Flughafen Berlin:",
-      berlinDirections: "Nehmen Sie die Autobahn A15 südlich Richtung Polen und fahren Sie dann auf Landstraßen nach Kliczków. Fahrzeit ca. 2,5 Stunden.",
+      fromWroclaw: "Vom Breslau:",
+      wroclawDirections: {
+        byCar: "Mit dem Auto - Fahrzeit ca. 1,5 Stunden.",
+        byTrain: "Mit dem Zug (empfohlen) - Fahrzeit ca. 1 Stunde bis zur nahegelegenen Stadt Boleslawiec, von wo aus wir Sie abholen."
+      },
+      fromBerlin: "Vom Berlin:",
+      berlinDirections: {
+        byCar: "Mit dem Auto - Fahrzeit ca. 2,5 Stunden.",
+        byTrain: "Mit dem Zug - Fahrzeit ca. 3,5 Stunden bis zur nahegelegenen Stadt Boleslawiec, von wo aus wir Sie abholen."
+      },
       accommodation: "Unterkunft",
       accommodationTextNotCovered: "Der Veranstaltungsort bietet Unterkünfte vor Ort. Bitte verwenden Sie bei der Buchung unseren Gruppencode:",
       accommodationTextCovered: "Wir haben eine Unterkunft vor Ort für Sie (1 Nacht im Schloss, inkl. Frühstück) gebucht!",
@@ -164,9 +175,15 @@ export const translations = {
       airport2: "Lotnisko Berlin (BER) - 200 km",
       gettingThere: "Jak dojechać",
       fromWroclaw: "Z lotniska we Wrocławiu:",
-      wroclawDirections: "Autostradą A4 w kierunku Legnicy, następnie kierować się znakami do Kliczkowa. Czas podróży około 1,5 godziny samochodem.",
+      wroclawDirections: {
+        byCar: "Samochodem - czas podróży około 1,5 godziny.",
+        byTrain: "Pociągiem (rekomendowane) - czas podróży ok. 1 godziny do pobliskiego miasta Bolesławiec, skąd was odbierzemy."
+      },
       fromBerlin: "Z lotniska w Berlinie:",
-      berlinDirections: "Autostradą A15 na południe w kierunku Polski, następnie drogami lokalnymi do Kliczkowa. Czas podróży około 2,5 godziny samochodem.",
+      berlinDirections: {
+        byCar: "Samochodem - czas podróży około 2,5 godziny.",
+        byTrain: "Pociągiem - czas podróży ok. 3,5 godziny do pobliskiego miasta Bolesławiec, skąd was odbierzemy."
+      },
       accommodation: "Zakwaterowanie",
       accommodationTextNotCovered: "Miejsce oferuje zakwaterowanie na miejscu. Podczas rezerwacji prosimy o podanie naszego kodu grupowego:",
       accommodationTextCovered: "Zarezerwowalismy dla Was zakwaterowanie na miejscu (1 noc w zamku, w tym śniadanie)!",

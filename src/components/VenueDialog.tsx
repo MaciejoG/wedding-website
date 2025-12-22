@@ -64,14 +64,16 @@ const VenueDialog = ({ open, onOpenChange }: VenueDialogProps) => {
               <Car className="w-5 h-5 text-bordeaux" />
               {t.venueDialog.gettingThere}
             </h3>
-            <div className="space-y-3 text-muted-foreground">
+            <div className="space-y-4 text-muted-foreground">
               <div>
                 <p className="font-medium text-foreground">{t.venueDialog.fromWroclaw}</p>
-                <p>{t.venueDialog.wroclawDirections}</p>
+                <p>{t.venueDialog.wroclawDirections.byCar}</p>
+                <p>{t.venueDialog.wroclawDirections.byTrain}</p>
               </div>
               <div>
                 <p className="font-medium text-foreground">{t.venueDialog.fromBerlin}</p>
-                <p>{t.venueDialog.berlinDirections}</p>
+                <p>{t.venueDialog.berlinDirections.byCar}</p>
+                <p>{t.venueDialog.berlinDirections.byTrain}</p>
               </div>
             </div>
           </div>
