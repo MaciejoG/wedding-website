@@ -9,7 +9,7 @@ const PersonalInvitation = () => {
     return (
       <section className="py-20 px-4 bg-card">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-8 text-destructive">
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-8 text-bordeaux">
             Invalid guest name(s) provided.
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
