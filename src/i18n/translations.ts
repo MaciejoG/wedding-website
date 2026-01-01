@@ -47,12 +47,12 @@ export const translations = {
       fromWroclaw: "From Wroclaw:",
       wroclawDirections: {
         byCar: "By car - journey time approximately 1.5 hours.",
-        byTrain: "By train (direct connection) - journey time approx. 1 hour to the nearby city Boleslawiec, from where we will pick you up."
+        byTrain: "By train (direct connection) - journey time approx. 1 hour to the nearby city Boleslawiec, from where we can pick you up."
       },
       fromBerlin: "From Berlin:",
       berlinDirections: {
         byCar: "By car - journey time approximately 2.5 hours.",
-        byTrain: "By train - journey time approx. 3.5 hours to the nearby city Boleslawiec, from where we will pick you up."
+        byTrain: "By train - journey time approx. 3.5 hours to the nearby city Boleslawiec, from where we can pick you up."
       },
       accommodation: "Accommodation",
       accommodationTextNotCovered: "The venue offers on-site accommodation. When booking, please use our group code:",
@@ -84,9 +84,9 @@ export const translations = {
         withPartner: "Wir freuen uns sehr, dich und deinen Partner zu unserer Hochzeit einzuladen."
       },
       message2: {
-        singular: "Deine Anwesenheit würde uns die Welt bedeuten, wenn wir diese wunderbare Reise gemeinsam beginnen.",
-        plural: "Eure Anwesenheit würde uns die Welt bedeuten, wenn wir diese wunderbare Reise gemeinsam beginnen.",
-        withPartner: "Eure Anwesenheit würde uns die Welt bedeuten, wenn wir diese wunderbare Reise gemeinsam beginnen."
+        singular: "Deine Anwesenheit würde uns viel bedeuten, wenn wir diese Reise gemeinsam beginnen.",
+        plural: "Eure Anwesenheit würde uns viel bedeuten, wenn wir diese Reise gemeinsam beginnen.",
+        withPartner: "Eure Anwesenheit würde uns viel bedeuten, wenn wir diese Reise gemeinsam beginnen."
       }
     },
     eventDetails: {
@@ -109,24 +109,24 @@ export const translations = {
       airport1: "Flughafen Breslau (WRO) - 130 km",
       airport2: "Flughafen Berlin (BER) - 200 km",
       gettingThere: "Anreise zum Veranstaltungsort",
-      fromWroclaw: "Vom Breslau:",
+      fromWroclaw: "Von Breslau:",
       wroclawDirections: {
         byCar: "Mit dem Auto - Fahrzeit ca. 1,5 Stunden.",
-        byTrain: "Mit dem Zug (empfohlen) - Fahrzeit ca. 1 Stunde bis zur nahegelegenen Stadt Boleslawiec, von wo aus wir Sie abholen."
+        byTrain: "Mit dem Zug (empfohlen) - Fahrzeit ca. 1 Stunde bis zur nahegelegenen Stadt Boleslawiec, von wo aus wir euch abholen können."
       },
-      fromBerlin: "Vom Berlin:",
+      fromBerlin: "Von Berlin:",
       berlinDirections: {
         byCar: "Mit dem Auto - Fahrzeit ca. 2,5 Stunden.",
-        byTrain: "Mit dem Zug - Fahrzeit ca. 3,5 Stunden bis zur nahegelegenen Stadt Boleslawiec, von wo aus wir Sie abholen."
+        byTrain: "Mit dem Zug - Fahrzeit ca. 3,5 Stunden bis zur nahegelegenen Stadt Boleslawiec, von wo aus wir euch abholen können."
       },
       accommodation: "Unterkunft",
-      accommodationTextNotCovered: "Der Veranstaltungsort bietet Unterkünfte vor Ort. Bitte verwenden Sie bei der Buchung unseren Gruppencode:",
-      accommodationTextCovered: "Wir haben eine Unterkunft vor Ort für Sie (1 Nacht im Schloss, inkl. Frühstück) gebucht!",
+      accommodationTextNotCovered: "Der Veranstaltungsort bietet Unterkünfte vor Ort. Bitte verwendet bei der Buchung unseren Gruppencode:",
+      accommodationTextCovered: "Wir haben eine Unterkunft vor Ort für euch (1 Nacht im Schloss, inkl. Frühstück) gebucht!",
       visitWebsite: "Website des Veranstaltungsortes besuchen"
     },
     rsvp: {
       title: "RSVP",
-      message: "Bitte teilen Sie uns mit, ob Sie an unserem besonderen Tag dabei sein können. Wir bitten um Rückmeldung bis zum 1. Mai 2024.",
+      message: "Bitte teilt uns mit, ob ihr an unserem besonderen Tag dabei sein könnt. Wir bitten um Rückmeldung bis zum 31. März 2026.",
       button: "Auf Einladung antworten",
       footnote: "Wir können es kaum erwarten, mit euch zu feiern!"
     }
@@ -191,7 +191,7 @@ export const translations = {
     },
     rsvp: {
       title: "RSVP",
-      message: "Prosimy o potwierdzenie obecności na naszym wyjątkowym dniu. Uprzejmie prosimy o odpowiedź do 1 maja 2024.",
+      message: "Prosimy o potwierdzenie obecności na naszym wyjątkowym dniu. Uprzejmie prosimy o odpowiedź do 31 marca 2026.",
       button: "Odpowiedz na zaproszenie",
       footnote: "Nie możemy się doczekać wspólnej zabawy!"
     }
