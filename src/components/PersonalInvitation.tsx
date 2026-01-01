@@ -21,11 +21,12 @@ const PersonalInvitation = () => {
   }
 
   let guest_names_preformatted = [];
-  if (t.language === 'pl') {
-    guest_names_preformatted = guestDetails.callers;
-  } else {
-    guest_names_preformatted = guestDetails.names;
-  }
+  // if (t.language === 'pl') {
+  //   guest_names_preformatted = guestDetails.callers;
+  // } else {
+  //   guest_names_preformatted = guestDetails.names;
+  // }
+  guest_names_preformatted = guestDetails.callers;
 
   let guest_names_formatted = ''
   let message1_formatted = '';

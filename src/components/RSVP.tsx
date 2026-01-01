@@ -5,15 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const RSVP = () => {
   const { t } = useLanguage();
 
-  // TODO: Update RSVP links for each language
-  let rsvpLink = "";
-  if (t.language === 'pl') {
-    rsvpLink = "https://docs.google.com/forms/d/e/1FAIpQLScp530hfQet1dMqyLYMBOGsZoapkfKkpuXVqpXsl0d04kInBw/viewform?usp=dialog";
-  } else if (t.language === 'de') {
-    rsvpLink = "https://docs.google.com/forms/d/e/1FAIpQLScp530hfQet1dMqyLYMBOGsZoapkfKkpuXVqpXsl0d04kInBw/viewform?usp=dialog";
-  } else {
-    rsvpLink = "https://docs.google.com/forms/d/e/1FAIpQLScp530hfQet1dMqyLYMBOGsZoapkfKkpuXVqpXsl0d04kInBw/viewform?usp=dialog";
-  }
+  const rsvpLink = "https://docs.google.com/forms/d/e/1FAIpQLScp530hfQet1dMqyLYMBOGsZoapkfKkpuXVqpXsl0d04kInBw/viewform?usp=dialog";
   
   return (
     <section className="py-20 px-4 bg-accent/30">
