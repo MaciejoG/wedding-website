@@ -122,7 +122,7 @@ export const GUEST_LIST: GuestDetails[] = [
     },
     {
         names: ["Anna", "Minh"],
-        callers: ["Anno", "Minh"],
+        callers: ["Anna", "Minh"],
         accommodationCovered: false,
         withPartner: false
     },
