@@ -88,10 +88,9 @@ const VenueDialog = ({ open, onOpenChange }: VenueDialogProps) => {
                 ? t.venueDialog.accommodationTextCovered
                 : t.venueDialog.accommodationTextNotCovered}
             </p>
-            {/* TODO: Update the group code */}
             {!hasAccommodationCovered && (
               <div className="bg-accent/30 p-4 rounded-lg border border-bordeaux/20">
-                <p className="font-mono font-semibold text-lg text-bordeaux">ABC123</p>
+                <p className="font-mono font-semibold text-lg text-bordeaux">LUCIA22</p>
               </div>
             )}
           </div>
