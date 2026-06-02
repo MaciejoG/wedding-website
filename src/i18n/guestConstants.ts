@@ -175,8 +175,8 @@ export const GUEST_LIST: GuestDetails[] = [
         withPartner: true
     },
     {
-        names: ["Maharshi", "Elly"],
-        callers: ["Maharshi", "Elly"],
+        names: ["Maharshi", "Elli"],
+        callers: ["Maharshi", "Elli"],
         accommodationCovered: false,
         withPartner: false
     },
